@@ -1,0 +1,91 @@
+{
+  "_comment": "Example model catalog for codex-bridge. Copy to ~/.codex/proxy-models.json (or any path) and point both Codex (config.toml -> model_catalog_json) and codex-bridge (.env -> MODEL_CATALOG_PATH) at it. The proxy infers the upstream provider from each slug prefix (deepseek-* / mimo-* / gpt-*).",
+  "models": [
+    {
+      "slug": "mimo-v2.5-pro",
+      "display_name": "MiMo v2.5 Pro",
+      "supported_reasoning_levels": [
+        { "effort": "none",    "description": "Thinking disabled" },
+        { "effort": "minimal", "description": "Minimal reasoning (mapped to low)" },
+        { "effort": "low",     "description": "Low reasoning effort" },
+        { "effort": "medium",  "description": "Medium reasoning effort" },
+        { "effort": "high",    "description": "High reasoning effort" }
+      ],
+      "shell_type": "default",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 1,
+      "base_instructions": "",
+      "supports_reasoning_summaries": false,
+      "support_verbosity": false,
+      "truncation_policy": { "mode": "tokens", "limit": 204800 },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    },
+    {
+      "slug": "mimo-v2.5",
+      "display_name": "MiMo v2.5",
+      "supported_reasoning_levels": [
+        { "effort": "none",    "description": "Thinking disabled" },
+        { "effort": "minimal", "description": "Minimal reasoning (mapped to low)" },
+        { "effort": "low",     "description": "Low reasoning effort" },
+        { "effort": "medium",  "description": "Medium reasoning effort" },
+        { "effort": "high",    "description": "High reasoning effort" }
+      ],
+      "shell_type": "default",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 2,
+      "base_instructions": "",
+      "supports_reasoning_summaries": false,
+      "support_verbosity": false,
+      "truncation_policy": { "mode": "tokens", "limit": 204800 },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    },
+    {
+      "slug": "deepseek-v4-pro",
+      "display_name": "DeepSeek v4 Pro",
+      "supported_reasoning_levels": [
+        { "effort": "none",    "description": "Thinking disabled" },
+        { "effort": "minimal", "description": "Minimal reasoning (mapped to low)" },
+        { "effort": "low",     "description": "Low reasoning effort" },
+        { "effort": "medium",  "description": "Medium reasoning effort" },
+        { "effort": "high",    "description": "High reasoning effort" },
+        { "effort": "xhigh",   "description": "Extra-high reasoning effort" }
+      ],
+      "shell_type": "default",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 3,
+      "base_instructions": "",
+      "supports_reasoning_summaries": false,
+      "support_verbosity": false,
+      "truncation_policy": { "mode": "tokens", "limit": 204800 },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    },
+    {
+      "slug": "deepseek-v4-flash",
+      "display_name": "DeepSeek v4 Flash",
+      "supported_reasoning_levels": [
+        { "effort": "none",    "description": "Thinking disabled" },
+        { "effort": "minimal", "description": "Minimal reasoning (mapped to low)" },
+        { "effort": "low",     "description": "Low reasoning effort" },
+        { "effort": "medium",  "description": "Medium reasoning effort" },
+        { "effort": "high",    "description": "High reasoning effort" },
+        { "effort": "xhigh",   "description": "Extra-high reasoning effort" }
+      ],
+      "shell_type": "default",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 4,
+      "base_instructions": "",
+      "supports_reasoning_summaries": false,
+      "support_verbosity": false,
+      "truncation_policy": { "mode": "tokens", "limit": 204800 },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    }
+  ]
+}
